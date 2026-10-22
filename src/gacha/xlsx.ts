@@ -567,7 +567,7 @@ export function encodeGachaXlsx(records: readonly GachaRecord[]): Uint8Array {
   const files: ZipEntry[] = [];
   const sheets: { name: string; path: string }[] = [];
   let sheetNumber = firstSheetNumber;
-  for (const [pool, entries] of [...groups.entries()].sort(([left], [right]) => left.localeCompare(right))) {
+  for (const [pool, entries] of [...groups.entries()].sort(([left], [right]) => left.localeCompare(right, "zh-CN"))) {
     const name = uniqueSheetName(pool, used);
     const rows: (string | number)[][] = [[...originalHeaders, ...extraHeaders]];
     for (const record of entries) {

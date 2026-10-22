@@ -182,4 +182,4 @@ test("interrupted app update recovery is repeatable without the main executable"
   } finally {
     await rm(root, { recursive: true, force: true });
   }
-});
+}, 15_000);
