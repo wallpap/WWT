@@ -1,0 +1,20 @@
+{
+  "name": "wuthering-waves-tool",
+  "version": "0.1.0",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run scripts/build-ui.ts && bun run src/client.ts",
+    "check": "bun run build:ui && tsc",
+    "test": "bun test tests",
+    "test:native": "WWT_TEST_NATIVE=1 bun test tests/platform/native-webview.test.ts",
+    "build:ui": "bun run scripts/build-ui.ts",
+    "build:portable": "bun run scripts/build-portable.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.3",
+    "typescript": "7.0.2",
+    "webview-bun": "2.4.0"
+  }
+}

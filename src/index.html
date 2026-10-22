@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>鸣潮助手</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#page-label">跳到主内容</a>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <symbol id="i-launcher" viewBox="0 0 24 24">
+        <path d="M8.5 5.5v13L18.5 12 8.5 5.5Z" />
+      </symbol>
+      <symbol id="i-resources" viewBox="0 0 24 24">
+        <path d="m12 3.5 8 4.25L12 12 4 7.75 12 3.5Z" />
+        <path d="m4 12 8 4.25L20 12" />
+        <path d="m4 16.25 8 4.25 8-4.25" />
+      </symbol>
+      <symbol id="i-gacha" viewBox="0 0 24 24">
+        <path d="M12 3.2c.45 4.65 3.15 7.35 7.8 7.8-4.65.45-7.35 3.15-7.8 7.8-.45-4.65-3.15-7.35-7.8-7.8 4.65-.45 7.35-3.15 7.8-7.8Z" />
+      </symbol>
+      <symbol id="i-daily" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" />
+      </symbol>
+      <symbol id="i-sign" viewBox="0 0 24 24">
+        <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" />
+        <path d="M8 3v4M16 3v4M3.5 9.5h17" />
+        <path d="m9 14.5 2 2 4-4" />
+      </symbol>
+      <symbol id="i-role" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="3.5" />
+        <path d="M5 20c.8-3.4 3.5-5 7-5s6.2 1.6 7 5" />
+      </symbol>
+      <symbol id="i-challenge" viewBox="0 0 24 24">
+        <path d="M8 4h8v4a4 4 0 0 1-8 0V4Z" />
+        <path d="M8 6H5.5v1A3.5 3.5 0 0 0 9 10.5M16 6h2.5v1A3.5 3.5 0 0 1 15 10.5" />
+        <path d="M12 12v4M9 20h6M10 16.5h4V20h-4Z" />
+      </symbol>
+      <symbol id="i-briefing" viewBox="0 0 24 24">
+        <path d="M4 20v-7M9.5 20V9M15 20v-5M20.5 20V5" />
+        <path d="M3 20h18" />
+      </symbol>
+      <symbol id="i-calculator" viewBox="0 0 24 24">
+        <rect x="5" y="3" width="14" height="18" rx="2.5" />
+        <path d="M8.5 7h7" />
+        <path d="M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01" />
+      </symbol>
+      <symbol id="i-migration" viewBox="0 0 24 24">
+        <path d="M4 7h11M11.5 3.5 15 7l-3.5 3.5" />
+        <path d="M20 17H9M12.5 13.5 9 17l3.5 3.5" />
+      </symbol>
+      <symbol id="i-local" viewBox="0 0 24 24">
+        <rect x="3.5" y="4" width="17" height="5" rx="1.5" />
+        <path d="M5 9v9.5A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5V9" />
+        <path d="M10 13h4" />
+      </symbol>
+      <symbol id="i-redemption" viewBox="0 0 24 24">
+        <path d="M3.5 9.5V7A1.5 1.5 0 0 1 5 5.5h14A1.5 1.5 0 0 1 20.5 7v2.5a2.5 2.5 0 0 0 0 5V17a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 17v-2.5a2.5 2.5 0 0 0 0-5Z" />
+        <path d="M14.5 6v12" stroke-dasharray="2 2.6" />
+      </symbol>
+      <symbol id="i-screenshots" viewBox="0 0 24 24">
+        <rect x="3.5" y="4.5" width="17" height="15" rx="2.5" />
+        <circle cx="9" cy="10" r="1.6" />
+        <path d="m5.5 17.5 4.5-4.5 3 3 2.5-2.5 3.5 3.5" />
+      </symbol>
+      <symbol id="i-account" viewBox="0 0 24 24">
+        <circle cx="9" cy="8.5" r="3.2" />
+        <path d="M3.2 20c.6-3.1 2.9-4.8 5.8-4.8s5.2 1.7 5.8 4.8" />
+        <path d="M15.8 5.6a3 3 0 0 1 0 5.8M17.5 15.6c1.8.5 3 1.9 3.4 4.4" />
+      </symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z" />
+      </symbol>
+    </svg>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <button class="brand" type="button" data-page-target="launcher" aria-label="鸣潮助手首页">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-copy"><strong>鸣潮助手</strong></span>
+        </button>
+        <nav aria-label="主导航">
+          <div class="nav-group">
+            <span class="nav-label">游戏</span>
+            <button class="nav-item active" type="button" data-page-target="launcher" aria-current="page">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-launcher" /></svg
+              ><span class="nav-text">启动器</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="resources">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-resources" /></svg
+              ><span class="nav-text">资源管理</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="gacha">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-gacha" /></svg
+              ><span class="nav-text">抽卡记录</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="screenshots">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-screenshots" /></svg
+              ><span class="nav-text">截图与资料</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="redemption">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-redemption" /></svg
+              ><span class="nav-text">兑换码</span>
+            </button>
+          </div>
+          <div class="nav-group">
+            <span class="nav-label">库街区</span>
+            <button class="nav-item" type="button" data-page-target="daily">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-daily" /></svg
+              ><span class="nav-text">每日数据</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="sign">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-sign" /></svg
+              ><span class="nav-text">库街区签到</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="role">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-role" /></svg
+              ><span class="nav-text">角色数据</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="challenge">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-challenge" /></svg
+              ><span class="nav-text">挑战历史</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="briefing">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-briefing" /></svg
+              ><span class="nav-text">资源简报</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="calculator">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-calculator" /></svg
+              ><span class="nav-text">养成计算</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="account">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-account" /></svg
+              ><span class="nav-text">库街区账号</span>
+            </button>
+          </div>
+          <div class="nav-group">
+            <span class="nav-label">数据</span>
+            <button class="nav-item" type="button" data-page-target="migration">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-migration" /></svg
+              ><span class="nav-text">数据迁移</span>
+            </button>
+            <button class="nav-item" type="button" data-page-target="local-data">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-local" /></svg
+              ><span class="nav-text">本地档案</span>
+            </button>
+          </div>
+          <div class="nav-group">
+            <span class="nav-label">应用</span>
+            <button class="nav-item" type="button" data-page-target="settings">
+              <svg class="nav-icon" aria-hidden="true">
+                <use href="#i-settings" /></svg
+              ><span class="nav-text">设置</span>
+            </button>
+          </div>
+        </nav>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div class="breadcrumb">
+            <span class="breadcrumb-root">鸣潮助手</span>
+            <span class="breadcrumb-sep" aria-hidden="true">/</span>
+            <h1 id="page-label" tabindex="-1">启动器</h1>
+          </div>
+          <div class="topbar-meta">
+            <button id="quick-nav-open" class="quick-nav-trigger" type="button" aria-haspopup="dialog" aria-controls="quick-nav-dialog">
+              <svg class="button-icon" aria-hidden="true">
+                <use href="#i-resources" /></svg
+              ><span>快速前往</span><kbd>Ctrl K</kbd>
+            </button>
+          </div>
+        </header>
+
+        <p id="app-notice" class="notice" role="status" aria-live="polite" hidden></p>
+
+        <section data-page="settings" hidden class="launcher-section" aria-labelledby="app-settings-title">
+          <div class="section-heading">
+            <h2 id="app-settings-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-settings" /></svg
+              >应用设置
+            </h2>
+            <div class="resource-actions"><button id="app-hide" class="secondary-button" type="button">隐藏到托盘</button><button id="app-exit" class="secondary-button" type="button">退出应用</button></div>
+          </div>
+          <p id="app-settings-notice" class="notice" role="status" aria-live="polite">正在读取应用设置…</p>
+          <form id="app-settings-form" class="settings-form">
+            <fieldset class="settings-group">
+              <legend>启动与窗口</legend>
+              <div class="settings-grid">
+                <label
+                  >启动页<select id="app-start-page">
+                    <option value="launcher">启动器</option>
+                    <option value="gacha">抽卡记录</option>
+                    <option value="daily">每日数据</option>
+                  </select></label
+                >
+                <label>启动窗口宽度<input id="app-width" type="number" min="640" max="3840" value="1180" required /></label>
+                <label>启动窗口高度<input id="app-height" type="number" min="480" max="2160" value="820" required /></label>
+                <label>界面缩放 (%)<input id="app-scale" type="number" min="75" max="150" value="100" required /></label>
+                <label
+                  >界面主题<select id="app-theme">
+                    <option value="system">跟随系统</option>
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                  </select></label
+                >
+                <label class="check"><input id="app-start-with-windows" type="checkbox" disabled />Windows 登录时启动助手</label>
+                <label class="check"><input id="app-silent-start" type="checkbox" />登录启动时隐藏到托盘</label>
+              </div>
+            </fieldset>
+            <fieldset class="settings-group">
+              <legend>运行行为</legend>
+              <div class="settings-grid">
+                <label
+                  >关闭主窗口<select id="app-close-action">
+                    <option value="exit">退出应用</option>
+                    <option value="tray">隐藏到系统托盘</option>
+                  </select></label
+                >
+                <label>显示/隐藏快捷键<input id="app-shortcut" type="text" placeholder="Ctrl+Alt+W，留空禁用" autocomplete="off" /></label>
+                <label class="check"><input id="app-hide-on-launch" type="checkbox" />游戏启动后隐藏到托盘</label>
+                <label class="check"><input id="app-exit-on-game-end" type="checkbox" />本工具启动的游戏结束后退出应用</label>
+                <label class="check"><input id="app-auto-start-game" type="checkbox" />手动打开助手时自动启动游戏</label>
+              </div>
+            </fieldset>
+            <fieldset class="settings-group">
+              <legend>更新来源</legend>
+              <div class="settings-grid">
+                <label class="wide">本项目更新源<input id="app-update-source" type="text" autocomplete="off" placeholder="GitHub owner/repo 或 HTTPS 更新清单" /></label>
+                <label class="check"><input id="app-check-updates" type="checkbox" />启动时检查应用更新</label>
+              </div>
+            </fieldset>
+            <div class="settings-actions">
+              <button id="app-settings-save" class="primary-button" type="submit" disabled>保存设置</button>
+            </div>
+          </form>
+          <h3>应用更新</h3>
+          <p id="app-update-notice" class="notice" role="status" aria-live="polite">正在读取当前版本…</p>
+          <div class="resource-actions"><button id="app-update-check" class="secondary-button" type="button">检查应用更新</button><button id="app-update-download" class="secondary-button" type="button" disabled>下载并校验</button><button id="app-update-install" class="primary-button" type="button" disabled>安装并重启</button><button id="app-update-cancel" class="secondary-button" type="button" hidden>取消下载</button></div>
+          <progress id="app-update-progress" max="1" value="0" hidden></progress>
+          <div id="app-update-details" hidden>
+            <h4>版本说明</h4>
+            <p id="app-update-notes" class="notice"></p>
+          </div>
+        </section>
+
+        <section data-page="screenshots" hidden class="launcher-section" aria-labelledby="screenshots-title">
+          <div class="section-heading">
+            <h2 id="screenshots-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-screenshots" /></svg
+              >截图与资料
+            </h2>
+            <div class="resource-actions"><button id="screenshots-refresh" class="secondary-button" type="button">刷新截图</button><button id="screenshots-folder" class="secondary-button" type="button">打开截图目录</button></div>
+          </div>
+          <div id="game-links" class="resource-actions" aria-label="Wiki 与地图入口"></div>
+          <p id="screenshots-notice" class="notice" role="status" aria-live="polite">读取当前游戏安装目录中的截图，可在系统查看器中打开原图。</p>
+          <div class="resource-actions">
+            <button id="screenshots-previous" class="secondary-button" type="button" disabled>上一张</button><label>截图<select id="screenshots-select" disabled></select></label><button id="screenshots-next" class="secondary-button" type="button" disabled>下一张</button><button id="screenshots-open" class="secondary-button" type="button" disabled>系统查看器打开</button>
+          </div>
+          <img id="screenshots-preview" class="screenshot-preview" alt="" hidden />
+        </section>
+
+        <section data-page="redemption" hidden class="launcher-section" aria-labelledby="redemption-title">
+          <div class="section-heading">
+            <h2 id="redemption-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-redemption" /></svg
+              >兑换码
+            </h2>
+            <div class="resource-actions"><button id="redemption-refresh" class="secondary-button" type="button">刷新列表</button><button id="redemption-local" class="secondary-button" type="button">查看本地缓存</button></div>
+          </div>
+          <p id="redemption-notice" class="notice" role="status" aria-live="polite">来源：game-cal，提供国服前瞻兑换码。复制后在游戏内兑换。</p>
+          <div class="resource-actions">
+            <label><input id="redemption-expired" type="checkbox" />显示已失效兑换码</label>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>兑换码</th>
+                  <th>奖励与说明</th>
+                  <th>状态</th>
+                  <th>开始时间</th>
+                  <th>结束时间</th>
+                  <th>来源</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="redemption-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section data-page="migration" hidden class="launcher-section" aria-labelledby="migration-title">
+          <div class="section-heading">
+            <h2 id="migration-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-migration" /></svg
+              >迁移已有数据
+            </h2>
+            <span>读取来源后合并到本地记录</span>
+          </div>
+          <div class="kuro-form">
+            <label
+              >来源<select id="migration-source">
+                <option value="xlsx">原版抽卡 XLSX</option>
+                <option value="java-sqlite">原版 SQLite 业务历史</option>
+                <option value="java-accounts">原版 SQLite 账号</option>
+                <option value="java-settings">原版设置 settings.json</option>
+              </select></label
+            >
+            <label class="migration-path">文件<input id="migration-path" type="text" autocomplete="off" placeholder="选择原版导出的 XLSX 文件" /></label>
+            <button id="migration-browse" class="secondary-button" type="button">选择来源</button>
+            <label id="migration-player-field">玩家 ID<input id="migration-player" type="text" autocomplete="off" placeholder="文件没有 UID 时填写" /></label>
+            <button id="migration-preview" class="primary-button" type="button" disabled>读取来源</button>
+          </div>
+          <p id="migration-summary" class="notice"></p>
+          <div class="resource-actions"><button id="migration-gacha" class="primary-button" type="button" disabled>合并抽卡记录</button><button id="migration-time" class="primary-button" type="button" disabled>合并游戏时长</button><button id="migration-challenges" class="primary-button" type="button" disabled>合并挑战历史</button><button id="migration-signs" class="primary-button" type="button" disabled>合并签到历史</button></div>
+          <div class="resource-actions"><button id="migration-accounts" class="primary-button" type="button" disabled>合并账号角色</button><button id="migration-settings" class="secondary-button" type="button" disabled>补齐尚未设置的项目</button></div>
+          <div class="resource-actions">
+            <button id="migration-archive" class="secondary-button" type="button" disabled>合并战斗日报与本地档案</button>
+          </div>
+          <p id="migration-notice" class="notice" role="status" aria-live="polite">选择原版 XLSX、sqlite.db 或设置文件，重复记录会自动跳过。</p>
+        </section>
+        <section data-page="local-data" hidden class="launcher-section" aria-labelledby="local-data-title">
+          <div class="section-heading">
+            <h2 id="local-data-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-local" /></svg
+              >本地档案
+            </h2>
+            <div class="resource-actions"><button id="local-data-import-logs" class="secondary-button" type="button">扫描当前游戏战斗日志</button><button id="local-data-refresh" class="secondary-button" type="button">重新读取</button></div>
+          </div>
+          <div class="resource-actions">
+            <label
+              >玩家<select id="local-data-player">
+                <option value="">全部玩家</option>
+              </select></label
+            ><label>开始日期<input id="local-data-start" type="date" /></label><label>结束日期<input id="local-data-end" type="date" /></label>
+          </div>
+          <p id="local-data-notice" class="notice" role="status" aria-live="polite">可扫描当前游戏日志，或在数据迁移页面合并原版 SQLite 本地档案后离线查看。</p>
+          <h3>战斗统计</h3>
+          <div id="local-data-metrics" class="metrics kuro-metrics"></div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>玩家</th>
+                  <th>切换角色</th>
+                  <th>角色死亡</th>
+                  <th>战斗</th>
+                  <th>获取声骸</th>
+                  <th>召唤声骸技能</th>
+                  <th>变身声骸技能</th>
+                  <th>瘫痪</th>
+                  <th>传送</th>
+                  <th>前闪避</th>
+                  <th>后闪避</th>
+                  <th>闪避反击</th>
+                  <th>消耗体力</th>
+                  <th>月卡</th>
+                </tr>
+              </thead>
+              <tbody id="local-data-battles"></tbody>
+            </table>
+          </div>
+          <h3>本地玩家资料</h3>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>玩家 ID</th>
+                  <th>名称</th>
+                  <th>等级</th>
+                  <th>地区</th>
+                  <th>性别代码</th>
+                  <th>更新时间</th>
+                </tr>
+              </thead>
+              <tbody id="local-data-players"></tbody>
+            </table>
+          </div>
+          <h3>角色图鉴</h3>
+          <label>搜索角色<input id="local-data-search" type="search" placeholder="名称、拼音缩写、属性或武器类型" /></label>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>角色 ID</th>
+                  <th>名称</th>
+                  <th>星级</th>
+                  <th>属性</th>
+                  <th>武器类型</th>
+                  <th>突破</th>
+                  <th>缩写</th>
+                </tr>
+              </thead>
+              <tbody id="local-data-roles"></tbody>
+            </table>
+          </div>
+        </section>
+        <section data-page="sign" hidden class="launcher-section sign-page" aria-labelledby="sign-title">
+          <div class="section-heading">
+            <h2 id="sign-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-sign" /></svg
+              >库街区签到
+            </h2>
+            <button class="secondary-button" type="button" data-page-target="account">选择账号与角色</button>
+          </div>
+          <div class="sign-top">
+            <label class="sign-auto" for="kuro-sign-auto">
+              <span class="sign-auto-icon" aria-hidden="true"
+                ><svg><use href="#i-sign" /></svg
+              ></span>
+              <span class="sign-auto-copy"><strong>自动签到</strong><small>全部账号角色 · 北京时间每日 00:05</small></span>
+              <input id="kuro-sign-auto" type="checkbox" />
+              <span class="sign-switch" aria-hidden="true"></span>
+            </label>
+          </div>
+          <p id="kuro-sign-auto-notice" class="notice" role="status" aria-live="polite">启用后在助手启动、加入新角色及北京时间每天 00:05 执行，助手需保持运行。</p>
+          <div class="sign-status-panel">
+            <div class="sign-status-copy">
+              <span class="sign-eyebrow">当前角色</span>
+              <p id="kuro-sign-notice" class="notice" role="status" aria-live="polite">进入本页查询今日签到状态。</p>
+            </div>
+            <div class="sign-actions"><button id="kuro-sign-refresh" class="secondary-button" type="button">刷新状态</button><button id="kuro-sign-local" class="secondary-button" type="button">查看本地历史</button><button id="kuro-sign-submit" class="primary-button" type="button" disabled>为当前角色签到</button></div>
+          </div>
+          <div class="sign-batch-panel">
+            <div class="sign-batch-head"><strong>批量签到</strong><span>先预览全部已绑定角色，再一次性提交</span></div>
+            <div class="resource-actions"><button id="kuro-sign-batch-preview" class="secondary-button" type="button">查看全部账号签到角色</button><button id="kuro-sign-batch-submit" class="primary-button" type="button" hidden>为以上全部角色签到</button></div>
+            <p id="kuro-sign-batch-notice" class="notice" role="status" aria-live="polite"></p>
+          </div>
+          <div class="sign-grid">
+            <section class="sign-panel sign-reward-panel" aria-labelledby="sign-rewards-title">
+              <div class="sign-panel-head">
+                <h3 id="sign-rewards-title">本月奖励</h3>
+                <span>签到日历</span>
+              </div>
+              <div id="kuro-sign-rewards" class="sign-rewards"></div>
+            </section>
+            <section class="sign-panel sign-history-panel" aria-labelledby="sign-history-title">
+              <div class="sign-panel-head">
+                <h3 id="sign-history-title">签到历史</h3>
+                <span>近期记录</span>
+              </div>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>日期</th>
+                      <th>奖励</th>
+                      <th>数量</th>
+                    </tr>
+                  </thead>
+                  <tbody id="kuro-sign-history"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section data-page="daily" hidden class="launcher-section" aria-labelledby="daily-title">
+          <div class="section-heading">
+            <h2 id="daily-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-daily" /></svg
+              >每日数据
+            </h2>
+            <button class="secondary-button" type="button" data-page-target="account">选择账号与角色</button>
+          </div>
+          <div class="resource-actions"><button id="kuro-daily-refresh" class="secondary-button" type="button">刷新查询</button><button id="kuro-daily-sync" class="primary-button" type="button">同步游戏数据</button><button id="kuro-daily-local" class="secondary-button" type="button">查看本地缓存</button></div>
+          <p id="kuro-daily-notice" class="notice" role="status" aria-live="polite">选择库街区角色后，进入本页自动查询。</p>
+          <h3>日常进度</h3>
+          <div id="kuro-daily-metrics" class="metrics kuro-metrics"></div>
+          <h3>基础数据</h3>
+          <div id="kuro-base-metrics" class="metrics kuro-metrics"></div>
+          <h3>收集数量</h3>
+          <div id="kuro-box-metrics" class="metrics kuro-metrics"></div>
+        </section>
+        <section data-page="account" hidden class="launcher-section" aria-labelledby="account-title">
+          <h2 id="account-title">
+            <svg class="section-icon" aria-hidden="true">
+              <use href="#i-account" /></svg
+            >库街区账号
+          </h2>
+          <p>支持短信或 Token 与 Did 登录，可管理最多 9 个账号。会话由当前 Windows 用户加密保护。</p>
+          <fieldset id="kuro-account-fields" class="kuro-fields">
+            <div class="account-selection">
+              <div class="kuro-form">
+                <label>当前账号<select id="kuro-account" aria-label="库街区账号"></select></label>
+                <label>游戏角色<select id="kuro-role" aria-label="鸣潮角色"></select></label>
+                <button id="kuro-refresh-roles" type="button" class="secondary-button" disabled>刷新角色</button>
+                <button id="kuro-remove" type="button" class="secondary-button danger-button" disabled>移除此账号</button>
+              </div>
+            </div>
+            <div class="login-panel">
+              <h3>添加或更新账号</h3>
+              <div class="login-methods" role="tablist" aria-label="登录方式">
+                <button id="kuro-sms-tab" type="button" role="tab" aria-selected="true" aria-controls="kuro-login-form">短信验证码</button>
+                <button id="kuro-token-tab" type="button" role="tab" aria-selected="false" aria-controls="kuro-token-form" tabindex="-1">Token 与 Did</button>
+              </div>
+              <form id="kuro-login-form" class="kuro-form" role="tabpanel" aria-labelledby="kuro-sms-tab">
+                <label>手机号<input id="kuro-phone" type="tel" autocomplete="off" placeholder="输入库街区绑定的手机号" pattern="1[3-9][0-9]{9}" required /></label>
+                <button id="kuro-send-sms" type="button" class="secondary-button">验证并发送短信</button>
+                <label>短信验证码<input id="kuro-code" type="password" inputmode="numeric" autocomplete="off" placeholder="输入验证码" required /></label>
+                <button type="submit" class="primary-button">登录并保存</button>
+                <p class="form-hint">在浏览器中完成滑块验证，收到短信后返回这里登录。</p>
+              </form>
+              <form id="kuro-token-form" class="kuro-form" role="tabpanel" aria-labelledby="kuro-token-tab" hidden>
+                <label>Token<input id="kuro-token" type="password" autocomplete="off" spellcheck="false" placeholder="粘贴账号 Token" required /></label>
+                <label>Did<input id="kuro-did" type="password" autocomplete="off" spellcheck="false" placeholder="粘贴配套的 Did" required /></label>
+                <label
+                  >凭据来源<select id="kuro-token-source">
+                    <option value="android">客户端（Android）</option>
+                    <option value="h5">网页（H5）</option>
+                  </select></label
+                >
+                <button type="submit" class="primary-button">验证并保存</button>
+                <p class="form-hint">Token 与 Did 需来自同一账号，凭据来源应与获取方式一致。</p>
+              </form>
+            </div>
+          </fieldset>
+          <p id="kuro-account-notice" class="notice" role="status" aria-live="polite">正在读取会话…</p>
+        </section>
+
+        <section data-page="role" hidden class="launcher-section" aria-labelledby="role-title">
+          <div class="section-heading">
+            <h2 id="role-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-role" /></svg
+              >角色数据
+            </h2>
+            <div class="resource-actions"><button id="kuro-role-local" class="secondary-button" type="button">查看本地缓存</button><button id="kuro-role-refresh" class="secondary-button" type="button">刷新数据</button></div>
+          </div>
+          <div class="role-toolbar">
+            <label class="resource-source" for="kuro-role-select"
+              ><span>已拥有角色</span
+              ><select id="kuro-role-select" aria-label="已拥有角色"></select
+            ></label>
+            <p id="kuro-role-notice" class="notice" role="status" aria-live="polite">进入本页查询当前库街区角色的角色数据。</p>
+          </div>
+          <p id="kuro-role-detail-notice" class="notice"></p>
+          <div class="role-hero">
+            <div id="kuro-role-profile" class="role-profile"></div>
+            <div id="kuro-role-metrics" class="role-metrics"></div>
+          </div>
+          <div class="role-board">
+            <section class="role-panel" aria-labelledby="role-attributes-title">
+              <div class="role-panel-heading">
+                <h3 id="role-attributes-title">基础属性</h3>
+                <span id="kuro-role-attribute-count"></span>
+              </div>
+              <div id="kuro-role-attributes" class="role-facts"></div>
+            </section>
+            <section class="role-panel" aria-labelledby="role-weapon-title">
+              <div class="role-panel-heading">
+                <h3 id="role-weapon-title">武器</h3>
+                <span id="kuro-role-weapon-count"></span>
+              </div>
+              <div id="kuro-role-weapon" class="role-weapon"></div>
+            </section>
+            <section class="role-panel" aria-labelledby="role-chains-title">
+              <div class="role-panel-heading">
+                <h3 id="role-chains-title">共鸣链</h3>
+                <span id="kuro-role-chain-count"></span>
+              </div>
+              <ol id="kuro-role-chains" class="role-chain-list"></ol>
+            </section>
+            <section class="role-panel" aria-labelledby="role-phantoms-title">
+              <div class="role-panel-heading">
+                <h3 id="role-phantoms-title">声骸</h3>
+                <span id="kuro-role-phantom-count"></span>
+              </div>
+              <div id="kuro-role-phantoms" class="role-phantom-list"></div>
+            </section>
+            <section class="role-panel role-panel-wide" aria-labelledby="role-skills-title">
+              <div class="role-panel-heading">
+                <h3 id="role-skills-title">技能</h3>
+                <span id="kuro-role-skill-count"></span>
+              </div>
+              <div id="kuro-role-skills" class="role-skill-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section data-page="challenge" hidden class="launcher-section challenge-page" aria-labelledby="challenge-title">
+          <div class="section-heading">
+            <h2 id="challenge-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-challenge" /></svg
+              >挑战历史
+            </h2>
+            <div class="resource-actions"><button id="kuro-challenge-local" class="secondary-button" type="button">查看本地历史</button><button id="kuro-challenge-refresh" class="secondary-button" type="button">刷新数据</button></div>
+          </div>
+          <p id="kuro-challenge-notice" class="notice" role="status" aria-live="polite">进入本页查询当前库街区角色的挑战记录。</p>
+          <div class="challenge-stack">
+            <article class="challenge-panel challenge-panel-tower">
+              <div class="challenge-panel-head">
+                <h3>逆境深塔</h3>
+                <label class="challenge-period">周期<select id="kuro-tower-period" aria-label="深塔历史周期" disabled></select></label>
+              </div>
+              <div id="kuro-tower-metrics" class="metrics kuro-metrics challenge-metrics"></div>
+              <div id="kuro-tower-context" class="challenge-cycle-context" aria-live="polite"></div>
+              <div id="kuro-tower-body" class="challenge-columns" aria-label="挑战分区"></div>
+            </article>
+            <article class="challenge-panel challenge-panel-slash">
+              <div class="challenge-panel-head">
+                <h3>冥歌海墟</h3>
+                <label class="challenge-period">周期<select id="kuro-slash-period" aria-label="海墟历史周期" disabled></select></label>
+              </div>
+              <div id="kuro-slash-metrics" class="metrics kuro-metrics challenge-metrics"></div>
+              <div id="kuro-slash-context" class="challenge-cycle-context" aria-live="polite"></div>
+              <div id="kuro-slash-body" class="challenge-columns" aria-label="挑战分区"></div>
+            </article>
+            <article class="challenge-panel challenge-panel-newtower">
+              <div class="challenge-panel-head">
+                <h3>终焉矩阵</h3>
+                <label class="challenge-period">周期<select id="kuro-new-tower-period" aria-label="矩阵历史周期" disabled></select></label>
+              </div>
+              <div id="kuro-new-tower-metrics" class="metrics kuro-metrics challenge-metrics"></div>
+              <div id="kuro-new-tower-context" class="challenge-cycle-context" aria-live="polite"></div>
+              <div id="kuro-new-tower-body" class="challenge-columns" aria-label="挑战分区"></div>
+            </article>
+          </div>
+        </section>
+
+        <section data-page="briefing" hidden class="launcher-section briefing-page" aria-labelledby="briefing-title">
+          <div class="section-heading">
+            <h2 id="briefing-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-briefing" /></svg
+              >资源简报
+            </h2>
+            <div class="resource-actions"><button id="kuro-briefing-refresh" class="secondary-button" type="button">刷新目录</button><button id="kuro-briefing-local" class="secondary-button" type="button">查看本地缓存</button></div>
+          </div>
+          <div class="briefing-toolbar">
+            <div class="resource-actions briefing-filters">
+              <label class="resource-source" for="kuro-briefing-kind"
+                ><span>类型</span
+                ><select id="kuro-briefing-kind">
+                  <option value="week">周报</option>
+                  <option value="month">月报</option>
+                  <option value="version">版本</option>
+                </select></label
+              ><label class="resource-source" for="kuro-briefing-period"
+                ><span>周期</span
+                ><select id="kuro-briefing-period" disabled></select
+              ></label>
+            </div>
+            <p id="kuro-briefing-notice" class="notice" role="status" aria-live="polite">进入本页读取资源简报周期。</p>
+          </div>
+          <div id="kuro-briefing-metrics" class="metrics kuro-metrics briefing-metrics"></div>
+          <div class="briefing-source-grid">
+            <section class="briefing-panel" aria-labelledby="briefing-stars-title">
+              <div class="briefing-panel-head">
+                <h3 id="briefing-stars-title">星声来源</h3>
+                <span>按来源拆分</span>
+              </div>
+              <div class="table-scroll briefing-source-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>来源</th>
+                      <th>数量</th>
+                    </tr>
+                  </thead>
+                  <tbody id="kuro-briefing-stars"></tbody>
+                </table>
+              </div>
+            </section>
+            <section class="briefing-panel" aria-labelledby="briefing-coins-title">
+              <div class="briefing-panel-head">
+                <h3 id="briefing-coins-title">贝币来源</h3>
+                <span>按来源拆分</span>
+              </div>
+              <div class="table-scroll briefing-source-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>来源</th>
+                      <th>数量</th>
+                    </tr>
+                  </thead>
+                  <tbody id="kuro-briefing-coins"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+          <section class="briefing-panel briefing-history-panel" aria-labelledby="briefing-history-title">
+            <div class="section-heading briefing-history-head">
+              <h3 id="briefing-history-title">本地历史趋势</h3>
+              <div class="resource-actions"><button id="kuro-briefing-history" class="secondary-button" type="button">读取历史</button><button id="kuro-briefing-sync-history" class="secondary-button" type="button">补齐本类历史周期</button></div>
+            </div>
+            <p id="kuro-briefing-history-notice" class="notice" role="status" aria-live="polite">按周、月或版本分别聚合，差值对应相邻已保存周期。补齐历史会依次查询尚未缓存的周期。</p>
+            <div id="kuro-briefing-history-metrics" class="metrics kuro-metrics briefing-history-metrics"></div>
+            <div class="briefing-chart-card">
+              <div class="briefing-chart-head"><span>星声走势</span><strong>相邻已保存周期</strong></div>
+              <svg id="kuro-briefing-chart" viewBox="0 0 640 180" role="img" aria-label="已保存周期的星声趋势" hidden>
+                <defs>
+                  <linearGradient id="briefing-area-gradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3868d9" stop-opacity=".24"></stop>
+                    <stop offset="100%" stop-color="#3868d9" stop-opacity="0"></stop>
+                  </linearGradient>
+                </defs>
+                <g class="briefing-chart-grid" aria-hidden="true">
+                  <line x1="36" y1="36" x2="604" y2="36"></line>
+                  <line x1="36" y1="74" x2="604" y2="74"></line>
+                  <line x1="36" y1="112" x2="604" y2="112"></line>
+                  <line x1="36" y1="150" x2="604" y2="150"></line>
+                </g>
+                <path id="kuro-briefing-area" fill="url(#briefing-area-gradient)"></path>
+                <polyline id="kuro-briefing-line" fill="none" stroke="currentColor" stroke-width="3"></polyline>
+                <g id="kuro-briefing-points" class="briefing-chart-points"></g>
+              </svg>
+            </div>
+            <div class="table-scroll briefing-history-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>周期</th>
+                    <th>星声</th>
+                    <th>较上条</th>
+                    <th>贝币</th>
+                    <th>较上条</th>
+                    <th>缓存时间</th>
+                  </tr>
+                </thead>
+                <tbody id="kuro-briefing-history-body"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section data-page="calculator" hidden class="launcher-section" aria-labelledby="calculator-title">
+          <div class="section-heading">
+            <h2 id="calculator-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-calculator" /></svg
+              >养成计算
+            </h2>
+            <div class="resource-actions"><button id="kuro-calculator-refresh" class="secondary-button" type="button">刷新目录</button><button id="kuro-calculator-local" class="secondary-button" type="button">查看本地目录</button></div>
+          </div>
+          <p id="kuro-calculator-notice" class="notice" role="status" aria-live="polite">进入本页读取角色和武器养成目录。</p>
+          <div class="kuro-calculator-grid">
+            <fieldset class="kuro-calculator-panel">
+              <legend>角色目标</legend>
+              <label>角色<span class="calculator-picker"><span id="kuro-calculator-role-preview" class="calculator-preview" hidden aria-hidden="true"></span><select id="kuro-calculator-role"></select></span></label><label>当前等级<input id="kuro-calculator-role-start" type="number" min="1" max="90" value="1" /></label><label>目标等级<input id="kuro-calculator-role-end" type="number" min="1" max="90" value="90" /></label>
+              <div class="kuro-calculator-skills table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>技能</th>
+                      <th>当前等级</th>
+                      <th>目标等级</th>
+                      <th>待解锁节点</th>
+                    </tr>
+                  </thead>
+                  <tbody id="kuro-calculator-skills"></tbody>
+                </table>
+              </div>
+              <button id="kuro-calculator-role-submit" class="primary-button" type="button">计算角色材料</button>
+            </fieldset>
+            <fieldset class="kuro-calculator-panel">
+              <legend>武器目标</legend>
+              <label>武器<span class="calculator-picker"><span id="kuro-calculator-weapon-preview" class="calculator-preview" hidden aria-hidden="true"></span><select id="kuro-calculator-weapon"></select></span></label><label>当前等级<input id="kuro-calculator-weapon-start" type="number" min="1" max="90" value="1" /></label><label>目标等级<input id="kuro-calculator-weapon-end" type="number" min="1" max="90" value="90" /></label><button id="kuro-calculator-weapon-submit" class="primary-button" type="button">计算武器材料</button>
+            </fieldset>
+          </div>
+          <div class="resource-actions"><button id="kuro-calculator-combined-submit" class="primary-button" type="button" disabled>计算角色＋武器合计材料</button></div>
+          <div class="resource-actions"><button id="kuro-calculator-sync" class="secondary-button" type="button" disabled>同步当前角色练度</button><button id="kuro-calculator-role-save" class="secondary-button" type="button">保存角色目标</button><button id="kuro-calculator-weapon-save" class="secondary-button" type="button">保存武器目标</button></div>
+          <h3>已保存目标</h3>
+          <p class="section-description">同一角色或武器再次保存时更新其目标。目标按当前库街区角色保存在本地。</p>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>类型</th>
+                  <th>名称</th>
+                  <th>目标</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="kuro-calculator-targets"></tbody>
+            </table>
+          </div>
+          <div class="resource-actions"><button id="kuro-calculator-role-batch" class="secondary-button" type="button">计算全部角色材料</button><button id="kuro-calculator-weapon-batch" class="secondary-button" type="button">计算全部武器材料</button></div>
+          <div id="kuro-calculator-metrics" class="metrics kuro-metrics"></div>
+          <div class="calculator-material-grid">
+            <section class="calculator-material-panel" aria-labelledby="calculator-all-title">
+              <h3 id="calculator-all-title">全部需求</h3>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr><th>材料</th><th>数量</th><th>品质</th></tr>
+                  </thead>
+                  <tbody id="kuro-calculator-all"></tbody>
+                </table>
+              </div>
+            </section>
+            <section class="calculator-material-panel" aria-labelledby="calculator-missing-title">
+              <h3 id="calculator-missing-title">缺少材料</h3>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr><th>材料</th><th>数量</th><th>品质</th></tr>
+                  </thead>
+                  <tbody id="kuro-calculator-missing"></tbody>
+                </table>
+              </div>
+            </section>
+            <section class="calculator-material-panel" aria-labelledby="calculator-synthetic-title">
+              <h3 id="calculator-synthetic-title">可合成关联材料</h3>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr><th>材料</th><th>数量</th><th>品质</th></tr>
+                  </thead>
+                  <tbody id="kuro-calculator-synthetic"></tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="launcher" data-page="launcher" class="launcher-section" aria-labelledby="launcher-title">
+          <div class="section-heading launcher-heading">
+            <div class="game-identity">
+              <span class="game-avatar" aria-hidden="true"></span>
+              <div>
+                <h2 id="launcher-title">鸣潮</h2>
+                <p>Wuthering Waves</p>
+              </div>
+            </div>
+            <button class="text-button" type="button" data-page-target="resources">管理游戏资源</button>
+          </div>
+          <div class="launcher-form">
+            <label class="path-control" for="game-path"
+              ><span>游戏位置<span class="field-note">自动保存</span></span>
+              <div class="path-picker"><input id="game-path" type="text" autocomplete="off" placeholder="选择 Wuthering Waves.exe" aria-describedby="launcher-notice" /><button id="browse-game-path" class="secondary-button" type="button">选择游戏</button></div></label
+            >
+            <label class="tier-control" for="game-tier"
+              ><span>资源档位</span
+              ><select id="game-tier">
+                <option value="auto">自动（优先 HD）</option>
+              </select></label
+            >
+            <button id="launch-game" class="primary-button" type="button" disabled>启动游戏</button>
+          </div>
+          <p id="launcher-notice" class="flow-notice" role="status" aria-live="polite">正在读取游戏路径…</p>
+        </section>
+
+        <section data-page="launcher" class="quick-access" aria-label="常用功能">
+          <button class="shortcut-card" type="button" data-page-target="daily">
+            <svg class="section-icon" aria-hidden="true">
+              <use href="#i-daily" /></svg
+            ><span><strong>每日数据</strong><small>体力、活跃与本周进度</small></span
+            ><span class="shortcut-chevron" aria-hidden="true">›</span>
+          </button>
+          <button class="shortcut-card" type="button" data-page-target="gacha">
+            <svg class="section-icon" aria-hidden="true">
+              <use href="#i-gacha" /></svg
+            ><span><strong>抽卡记录</strong><small>卡池进度与五星记录</small></span
+            ><span class="shortcut-chevron" aria-hidden="true">›</span>
+          </button>
+          <button class="shortcut-card" type="button" data-page-target="sign">
+            <svg class="section-icon" aria-hidden="true">
+              <use href="#i-sign" /></svg
+            ><span><strong>库街区签到</strong><small>领取今日奖励</small></span
+            ><span class="shortcut-chevron" aria-hidden="true">›</span>
+          </button>
+        </section>
+
+        <section id="resources" data-page="resources" hidden class="resource-section" aria-labelledby="resources-title">
+          <div class="section-heading">
+            <h2 id="resources-title">
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-resources" /></svg
+              >资源管理
+            </h2>
+            <span>检查版本与文件，按需下载更新</span>
+          </div>
+          <div class="resource-actions"><button id="browse-game-install" class="secondary-button" type="button">选择新安装目录</button><span>首次安装选择独立目录，再检查更新并下载；主程序丢失时也可修复。</span></div>
+          <div class="resource-actions">
+            <label class="resource-source" for="resource-source"
+              ><span>游戏渠道</span
+              ><select id="resource-source">
+                <option value="mainland">国服</option>
+                <option value="bilibili">Bilibili</option>
+              </select></label
+            >
+            <label class="resource-source" for="resource-purpose"
+              ><span>资源任务</span
+              ><select id="resource-purpose">
+                <option value="current">当前版本更新</option>
+                <option value="predownload">下一版本预下载</option>
+              </select></label
+            >
+            <button id="check-updates" class="secondary-button" type="button">检查更新</button>
+            <button id="install-resource-update" class="primary-button" type="button" hidden>下载并更新</button>
+          </div>
+          <div class="resource-result">
+            <p id="resource-notice" class="flow-notice" role="status" aria-live="polite">点击“检查更新”，自动检查本地文件和官方版本。</p>
+            <p id="resource-summary" class="resource-summary" hidden></p>
+            <p id="installation-info" class="installation-info">更新前会显示目标目录与下载量。</p>
+          </div>
+          <div id="resource-progress-area" hidden>
+            <progress id="resource-download-progress" max="1" value="0" aria-label="资源下载进度"></progress>
+            <div class="download-footer">
+              <p id="resource-download-status" class="installation-info" role="status" aria-live="polite"></p>
+              <button id="cancel-resource-update" class="secondary-button" type="button" hidden>取消更新</button>
+            </div>
+          </div>
+          <details class="resource-tools">
+            <summary>更多工具</summary>
+            <div class="resource-actions"><button id="check-local-resources" class="secondary-button" type="button">校验本地资源</button><button id="inspect-resources" class="secondary-button" type="button">查看资源档位</button></div>
+          </details>
+          <details class="resource-tools">
+            <summary>官服与 B 服文件切换</summary>
+            <div class="resource-actions">
+              <label
+                >目标服务器<select id="server-switch-source">
+                  <option value="mainland">国内官服</option>
+                  <option value="bilibili">B 服</option>
+                </select></label
+              ><button id="server-switch-inspect" class="secondary-button" type="button">检查切服缓存</button><button id="server-switch-prepare" class="secondary-button" type="button">下载或刷新目标缓存</button><button id="server-switch-apply" class="primary-button" type="button" disabled>切换或修复目标服务器</button><button id="server-switch-clear" class="secondary-button" type="button">清理目标缓存</button><button id="server-switch-cancel" class="secondary-button" type="button" hidden>取消操作</button>
+            </div>
+            <p id="server-switch-notice" class="notice" role="status" aria-live="polite">检查当前服务器，准备目标缓存后即可切换或修复。</p>
+          </details>
+          <div class="resource-actions">
+            <label class="resource-source">同时下载<input id="download-parallel" type="number" min="1" max="16" step="1" value="4" /></label><label class="resource-source">限速 MiB/s（0 为不限）<input id="download-limit" type="number" min="0" step="0.1" value="0" /></label>
+          </div>
+        </section>
+
+        <section id="game-time" data-page="launcher" class="game-time-section" aria-labelledby="game-time-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="game-time-title">游戏时长</h2>
+            </div>
+            <button id="scan-game-logs" class="secondary-button" type="button">扫描游戏日志</button>
+          </div>
+          <div class="time-metrics">
+            <article class="metric"><span>今日时长</span><strong id="time-today">0小时00分钟</strong><small>按本地日期统计</small></article>
+            <article class="metric"><span>累计时长</span><strong id="time-total">0小时00分钟</strong><small id="time-count">0 条记录</small></article>
+            <article class="metric"><span>本周时长</span><strong id="time-week">0小时00分钟</strong><small>本地周一开始</small></article>
+            <article class="metric"><span>本月时长</span><strong id="time-month">0小时00分钟</strong><small>当前筛选范围内</small></article>
+            <article class="metric"><span>活跃日日均</span><strong id="time-average">0小时00分钟</strong></article>
+            <article class="metric"><span>单日最长</span><strong id="time-longest">0小时00分钟</strong></article>
+          </div>
+          <div class="resource-actions">
+            <label
+              >玩家<select id="time-player-filter">
+                <option value="">全部玩家</option>
+              </select></label
+            ><label>开始日期<input id="time-filter-start" type="date" /></label><label>结束日期<input id="time-filter-end" type="date" /></label>
+          </div>
+          <details class="manual-entry">
+            <summary>手动添加记录<small>补充遗漏的游戏时间</small></summary>
+            <form id="game-time-form" class="game-time-form">
+              <label><span>账号 ID</span><input id="time-role" type="text" autocomplete="off" placeholder="可选" /></label>
+              <label><span>日期</span><input id="time-date" type="date" required /></label>
+              <label><span>开始</span><input id="time-start" type="time" required /></label>
+              <label><span>结束</span><input id="time-end" type="time" required /></label>
+              <button class="primary-button" type="submit">添加记录</button>
+            </form>
+          </details>
+          <p id="game-time-notice" class="notice" role="status" aria-live="polite">暂无游戏时长记录。</p>
+          <details class="inline-details">
+            <summary>每日汇总</summary>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>日期</th>
+                    <th>时长</th>
+                  </tr>
+                </thead>
+                <tbody id="time-daily-body"></tbody>
+              </table>
+            </div>
+          </details>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>账号</th>
+                  <th>开始</th>
+                  <th>结束</th>
+                  <th>时长</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="game-time-body">
+                <tr>
+                  <td class="empty-state" colspan="6">暂无游戏时长记录。通过助手启动游戏可自动记录，也可扫描游戏日志补充。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="gacha" data-page="gacha" hidden class="gacha-page" aria-labelledby="gacha-title">
+          <div class="gacha-heading">
+            <div>
+              <h2 id="gacha-title">唤取总览</h2>
+              <p>按玩家查看各卡池的唤取进度与五星记录。</p>
+            </div>
+            <div class="gacha-heading-actions">
+              <label class="gacha-player"
+                >玩家<select id="player-filter">
+                  <option value="">全部玩家</option>
+                </select></label
+              ><button id="gacha-import-toggle" class="primary-button" type="button" aria-controls="gacha-import" aria-expanded="true">更新与导入</button>
+            </div>
+          </div>
+          <details id="gacha-import" class="gacha-import" open>
+            <summary>
+              <svg class="section-icon" aria-hidden="true">
+                <use href="#i-migration" /></svg
+              ><span><strong id="import-title">更新与导入记录</strong><small>游戏链接查询 / JSON、XLSX 文件导入</small></span
+              ><span class="disclosure-label" aria-hidden="true">展开</span>
+            </summary>
+            <div class="gacha-import-content">
+              <form id="online-gacha-form" class="import-form">
+                <label class="player-control" for="gacha-link"><span>游戏抽卡链接</span><input id="gacha-link" type="password" autocomplete="off" spellcheck="false" placeholder="粘贴游戏内抽卡记录完整链接" required /></label>
+                <button id="query-gacha" class="primary-button" type="submit">查询官方记录</button>
+                <button id="pick-gacha-log" class="secondary-button" type="button">从 Client.log 提取</button>
+              </form>
+              <p id="gacha-query-notice" class="notice" role="status" aria-live="polite">查询全部 13 个卡池，链接使用后即清空。</p>
+              <form id="import-form" class="import-form">
+                <label class="file-control" for="import-file">
+                  <span>选择 JSON / XLSX</span>
+                  <input id="import-file" type="file" accept=".json,.xlsx,application/json,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" required />
+                </label>
+                <label class="player-control" for="player-id">
+                  <span>玩家 ID</span>
+                  <input id="player-id" type="text" autocomplete="off" placeholder="无 UID 的 XLSX / pool.json 必填" />
+                </label>
+                <button class="primary-button" type="submit">导入记录</button>
+              </form>
+              <p id="notice" class="notice" role="status" aria-live="polite">选择 JSON 或 XLSX 文件开始导入。</p>
+            </div>
+          </details>
+          <p id="gacha-action-notice" class="notice" role="status" aria-live="polite"></p>
+          <section class="metrics gacha-metrics" aria-label="抽卡统计">
+            <article class="metric"><span>总抽数</span><strong id="metric-pulls">0</strong><small>当前玩家全部卡池</small></article>
+            <article class="metric"><span>消耗星声</span><strong id="metric-stones">0</strong><small>按每抽 160 星声估算</small></article>
+            <article class="metric"><span>五星获得</span><strong id="metric-ssr">0</strong><small>五星记录数</small></article>
+            <article class="metric"><span>UP 五星</span><strong id="metric-up-ssr">0</strong><small>按常驻角色名单估算</small></article>
+            <article class="metric"><span>五星平均抽数</span><strong id="metric-average">0.0</strong><small>总抽数 / 五星数</small></article>
+          </section>
+          <div class="gacha-view-bar">
+            <div class="segmented-control" role="tablist" aria-label="抽卡视图">
+              <button id="gacha-overview-tab" type="button" role="tab" aria-selected="true" aria-controls="gacha-overview">卡池概览</button>
+              <button id="gacha-history-tab" type="button" role="tab" aria-selected="false" aria-controls="gacha-history" tabindex="-1">五星历史</button>
+              <button id="gacha-records-tab" type="button" role="tab" aria-selected="false" aria-controls="gacha-records" tabindex="-1">全部记录</button>
+            </div>
+            <div class="resource-actions gacha-exports" aria-label="导出所选玩家的全部记录"><button id="export-json-button" class="secondary-button" type="button" title="导出所选玩家的全部记录" disabled>导出 JSON</button><button id="export-xlsx-button" class="secondary-button" type="button" title="导出所选玩家的全部记录" disabled>导出 XLSX</button></div>
+          </div>
+          <section id="gacha-overview" role="tabpanel" aria-labelledby="gacha-overview-tab" tabindex="0">
+            <div class="section-heading gacha-overview-heading">
+              <h2>卡池一览</h2>
+              <span>按所选玩家的完整本地记录计算</span>
+            </div>
+            <div id="gacha-pool-cards" class="gacha-pool-grid"></div>
+            <p class="gacha-history-hint">已垫抽数从最近一次五星开始累计；首个五星区间可能不完整，平均值按完整区间计算。</p>
+            <div class="detail-strip" aria-label="记录概览">
+              <div><span>记录时间范围</span><strong id="metric-range">暂无记录</strong></div>
+              <div><span>最多获得五星</span><strong id="top-ssr">暂无</strong></div>
+              <div><span>不歪率</span><strong id="metric-non-banner">0.0%</strong></div>
+              <div><span>角色池 / 武器池</span><strong id="metric-role-weapon">暂无</strong></div>
+              <div><span>最多获得 UP</span><strong id="top-up-ssr">暂无</strong></div>
+            </div>
+          </section>
+          <section id="gacha-history" hidden class="table-section" role="tabpanel" aria-labelledby="gacha-history-tab" tabindex="0">
+            <div class="section-heading">
+              <h2 id="gacha-history-title">保底与五星历史</h2>
+              <span>按当前玩家的完整本地记录计算</span>
+            </div>
+            <div class="resource-actions">
+              <label>玩家与卡池<select id="gacha-history-pool" aria-label="保底历史卡池"></select></label>
+            </div>
+            <p id="gacha-history-summary" class="notice">暂无记录</p>
+            <p id="gacha-history-empty" class="empty-state" hidden>该卡池还未记录到五星，可在卡池概览查看已垫抽数。</p>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>五星物品</th>
+                    <th>区间抽数</th>
+                    <th>区间范围</th>
+                    <th>唤取名称</th>
+                  </tr>
+                </thead>
+                <tbody id="gacha-history-body"></tbody>
+              </table>
+            </div>
+            <div class="resource-actions"><button id="gacha-history-previous" class="secondary-button" type="button" disabled>上一页</button><span id="gacha-history-page">第 1 / 1 页</span><button id="gacha-history-next" class="secondary-button" type="button" disabled>下一页</button></div>
+          </section>
+          <section id="gacha-records" hidden class="table-section" role="tabpanel" aria-labelledby="gacha-records-tab" tabindex="0">
+            <div class="section-heading">
+              <h2 id="table-title">抽卡明细</h2>
+              <span>最新记录优先</span>
+            </div>
+            <div class="filters" aria-label="筛选记录">
+              <label
+                >唤取名称<select id="pool-filter">
+                  <option value="">全部</option>
+                </select></label
+              ><span id="records-count" class="record-count">0 条记录</span><span class="filter-spacer"></span><button id="gacha-load-more" class="secondary-button" type="button" hidden>加载更多记录</button>
+            </div>
+            <div class="table-scroll" tabindex="0" aria-label="抽卡明细，滚动查看更多记录">
+              <table>
+                <thead>
+                  <tr>
+                    <th>时间</th>
+                    <th>玩家</th>
+                    <th>卡池</th>
+                    <th>获得物品</th>
+                    <th>品质</th>
+                    <th>类型</th>
+                  </tr>
+                </thead>
+                <tbody id="records-body">
+                  <tr>
+                    <td class="empty-state" colspan="6">尚无记录</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <dialog id="quick-nav-dialog" class="quick-nav-dialog" aria-labelledby="quick-nav-title">
+      <div class="quick-nav-heading">
+        <h2 id="quick-nav-title">快速前往</h2>
+        <button id="quick-nav-close" class="text-button" type="button" aria-label="关闭快速导航">关闭 <kbd>Esc</kbd></button>
+      </div>
+      <label class="quick-nav-search" for="quick-nav-input"><span class="visually-hidden">搜索功能</span><input id="quick-nav-input" type="search" placeholder="搜索页面，如：抽卡、签到、设置…" autocomplete="off" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-controls="quick-nav-results" /></label>
+      <div id="quick-nav-results" class="quick-nav-results" role="listbox" aria-label="页面"></div>
+      <p id="quick-nav-empty" class="quick-nav-empty" role="status" hidden>没有匹配的功能，试试“抽卡”“签到”或“设置”。</p>
+      <p class="quick-nav-help">
+        <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span><span><kbd>Enter</kbd> 前往</span><span><kbd>Esc</kbd> 关闭</span>
+      </p>
+    </dialog>
+  </body>
+</html>
