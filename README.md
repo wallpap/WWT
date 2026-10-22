@@ -4,6 +4,23 @@
 
 本项目参考 [Leck 的 WutheringWavesTool](https://github.com/leck995/WutheringWavesTool) 的功能与实现，使用 TypeScript 和 Bun 编写。感谢原作者和贡献者开放源码。两个项目分别维护，问题反馈请提交到本仓库。
 
+---
+
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/6a418513-975b-4822-9ecf-057e03fd40ba" /> 
+
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/4a8c8d90-de4b-44ab-9636-3ddd530fb1f3" /> 
+
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/f5eaa448-56e8-41ea-88bf-14fee980529a" />
+
+<img width="2560" height="1368" alt="image" src="https://github.com/user-attachments/assets/5d499556-e893-4327-ba3f-dffe2ff4c4d6" />
+
+
+
+---
+
+
+
+
 ## 功能
 
 - 启动游戏、记录游玩时长，管理资源更新、校验、修复和预下载。
