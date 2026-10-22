@@ -1,0 +1,87 @@
+name: Windows 构建与发布
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  windows:
+    name: Windows x64
+    runs-on: windows-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: 获取源码
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: 安装 Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: "1.4.4"
+
+      - name: 核对版本
+        id: version
+        run: |
+          $version = (Get-Content package.json -Raw | ConvertFrom-Json).version
+          if ($env:GITHUB_REF_TYPE -eq 'tag' -and $env:GITHUB_REF_NAME -ne "v$version") {
+            throw "标签 $env:GITHUB_REF_NAME 与 package.json 版本 $version 不一致"
+          }
+          "version=$version" >> $env:GITHUB_OUTPUT
+
+      - name: 安装依赖
+        run: bun install --frozen-lockfile
+
+      - name: 检查、测试并构建便携包
+        run: bun run build:portable
+
+      - name: 保存构建产物
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: WWT-${{ steps.version.outputs.version }}-windows-x64
+          path: |
+            dist/WWT-*-windows-x64.zip
+            dist/WWT-*-windows-x64.zip.sha256
+            dist/update.json
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 7
+
+      - name: 发布 GitHub Release
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          $tag = $env:GITHUB_REF_NAME
+          $version = $env:RELEASE_VERSION
+          $assets = @("dist/WWT-$version-windows-x64.zip", "dist/WWT-$version-windows-x64.zip.sha256", 'dist/update.json')
+          gh release view $tag --repo $env:GITHUB_REPOSITORY --json tagName *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $tag @assets --repo $env:GITHUB_REPOSITORY --clobber
+            if ($LASTEXITCODE -ne 0) { throw '发布产物上传失败' }
+          } else {
+            $notes = @"
+          支持 Windows 10 / Windows 11 x64，适用于鸣潮国服官服和 B 服。
+
+          下载 WWT-$version-windows-x64.zip，完整解压后运行 WWT.exe。包内附带所需 VC++ DLL；如缺少 WebView2，启动时会提示官方下载入口。
+
+          同页提供 SHA-256 校验文件与应用更新清单 update.json。使用说明、原项目介绍和致谢见仓库 README。
+          "@
+            $notesPath = Join-Path $env:RUNNER_TEMP 'wwt-release-notes.md'
+            [IO.File]::WriteAllText($notesPath, $notes, [Text.UTF8Encoding]::new($false))
+            $options = @('--latest')
+            if ($version.Contains('-')) { $options = @('--prerelease') }
+            gh release create $tag @assets --repo $env:GITHUB_REPOSITORY --verify-tag --title "鸣潮助手 $tag" --notes-file $notesPath @options
+            if ($LASTEXITCODE -ne 0) { throw 'GitHub Release 发布失败' }
+          }
